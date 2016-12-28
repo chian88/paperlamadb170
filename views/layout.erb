@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Database Application</title>
+    <link href='/db.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <% if session[:message] %>
+      <p class="message"><%= session.delete(:message) %></p>
+    <% end %>
+    
+    <a href="/"><h1>Paper Lama online database</h1></a>
+    <%= yield %>
+  </body>
+  
+  
+</html>

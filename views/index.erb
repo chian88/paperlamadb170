@@ -1,0 +1,29 @@
+<p>The list of company's data is listed below:</p>
+
+<ul>
+  <% @files.each do |file| %>
+  <li>
+    <a href='/<%= file %>'><%= file %></a>
+    <a href='/<%= file %>/edit'>Edit</a>
+    <a href='/<%= file %>/duplicate'>Duplicate</a>
+    <form method='post' action='/<%= file %>/delete'>
+      <button type='submit'>Delete this data</button>
+    </form>
+  </li>
+  <% end %>
+</ul>
+
+<p><a href="/create">Create new data document</a></p>
+
+<% if session[:username] %>
+<!-- have a text of chian is signed in, a button to sign out. -->
+  <form method='post' action='/users/signout'>
+    <p>Signed in as <%= session[:username] %></p>
+    <button>Sign Out</button>  
+  </form>
+<% else %>
+<!-- To present a sign in button -->
+  <a href='/users/signin'>Sign in to database</a>
+<% end %>
+
+<p>Don't have an account? <a href='/users/signup'>Sign up</a></p>

@@ -1,0 +1,3 @@
+petrol: $0.40/km 
+equipment: $2.00/day
+staffing cost: $3.50/day
