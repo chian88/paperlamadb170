@@ -3,9 +3,9 @@
 <ul>
   <% @files.each do |file| %>
   <li>
-    <a href='/<%= file %>'><%= file %></a>
-    <a href='/<%= file %>/edit'>Edit</a>
-    <a href='/<%= file %>/duplicate'>Duplicate</a>
+    <strong><a class='title' href='/<%= file %>'><%= file %></a></strong>
+    <a class='function' href='/<%= file %>/edit'>Edit</a>
+    <a class='function' href='/<%= file %>/duplicate'>Duplicate</a>
     <form method='post' action='/<%= file %>/delete'>
       <button type='submit'>Delete this data</button>
     </form>

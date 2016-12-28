@@ -2,3 +2,11 @@
   padding: 10px;
   background: #FFFF99;
 }
+
+.function {
+  text-size: 0.5em;
+}
+
+.title {
+  text-size: 1em;
+}
